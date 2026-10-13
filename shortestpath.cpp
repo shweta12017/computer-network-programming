@@ -36,7 +36,7 @@ void dijkstra(int graph[V][V], int src) //Store costs bet vertices and src means
 
         visited[u] = true;
 
-        for (int v = 0; v < V; v++)
+        for (int v = 0; v < V; v++) // check the distance of near vertices
         {
             if (!visited[v] && graph[u][v] != 0 &&
                 dist[u] != INT_MAX &&
@@ -49,7 +49,7 @@ void dijkstra(int graph[V][V], int src) //Store costs bet vertices and src means
 
     cout << "\nShortest distances from " << char('A' + src) << ":\n";
 
-    for (int i = 0; i < V; i++)
+    for (int i = 0; i < V; i++)   //show shortest distance
     {
         cout << char('A' + i) << " = ";
 
